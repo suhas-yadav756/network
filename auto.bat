@@ -1,8 +1,10 @@
 @echo off
 echo Downloading Network Programs...
 
-git clone https://github.com/suhas-yadav756/network.git
+curl -L https://github.com/suhas-yadav756/network/archive/refs/heads/main.zip -o network.zip
+
+powershell -Command "Expand-Archive -Force network.zip ."
 
 echo.
-echo Done!
+echo Download and extraction completed successfully!
 pause
